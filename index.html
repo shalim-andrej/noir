@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="ru" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOIR — авторский ресторан в Москве | Дегустационный сет, винная карта</title>
+  <meta name="description" content="NOIR — авторский ресторан высокой кухни в Москве. Дегустационный сет из восьми подач, винная карта на 240 позиций, 12 столов. Большой Патриарший переулок, 8. Бронирование: +7 (495) 120-45-67.">
+  <meta name="keywords" content="ресторан Москва, авторская кухня, дегустационный сет, винная карта, высокая кухня, fine dining">
+  <meta name="theme-color" content="#0B0A08">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="NOIR">
+  <meta property="og:title" content="NOIR — авторский ресторан в Москве">
+  <meta property="og:description" content="12 столов. Дегустационный сет из восьми подач. Винная карта на 240 позиций — гастрономия, сведённая к совершенству.">
+  <meta property="og:image" content="assets/img/hero-poster.jpg">
+  <meta property="og:locale" content="ru_RU">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Favicon: gold N on black -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230B0A08'/%3E%3Crect x='1' y='1' width='62' height='62' rx='13' fill='none' stroke='%23C9A227' stroke-width='2'/%3E%3Ctext x='32' y='45' font-family='Georgia, serif' font-size='38' font-weight='600' fill='%23E8C96A' text-anchor='middle'%3EN%3C/text%3E%3C/svg%3E">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "NOIR",
+    "description": "Авторский ресторан высокой кухни в Москве. Дегустационный сет из восьми подач, винная карта на 240 позиций.",
+    "telephone": "+7 (495) 120-45-67",
+    "servesCuisine": ["Авторская", "Французская", "Fine dining"],
+    "priceRange": "₽₽₽₽",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Большой Патриарший переулок, 8",
+      "addressLocality": "Москва",
+      "addressCountry": "RU"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "19:00",
+      "closes": "00:00"
+    }
+  }
+  </script>
+
+  <script>document.documentElement.classList.replace('no-js', 'js');</script>
+  <noscript><style>.preloader{display:none!important}.reveal{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body class="is-loading">
+
+  <!-- ================= PRELOADER ================= -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader__bg"></div>
+    <div class="preloader__content">
+      <div class="preloader__word">
+        <span class="preloader__letter">N</span><span class="preloader__letter">O</span><span class="preloader__letter">I</span><span class="preloader__letter">R</span>
+      </div>
+      <div class="preloader__counter"><span class="preloader__num" id="preloaderNum">0</span><span class="preloader__pct">%</span></div>
+    </div>
+  </div>
+
+  <!-- ================= SCROLL PROGRESS ================= -->
+  <div class="progress" aria-hidden="true"><span class="progress__bar" id="progressBar"></span></div>
+
+  <!-- ================= CUSTOM CURSOR ================= -->
+  <div class="cursor" aria-hidden="true">
+    <div class="cursor__dot" id="cursorDot"></div>
+    <div class="cursor__ring" id="cursorRing"></div>
+  </div>
+
+  <!-- ================= HEADER ================= -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a class="logo" href="#hero" aria-label="NOIR — на главную">NOIR<span class="logo__dot">.</span></a>
+      <nav class="nav" aria-label="Основная навигация">
+        <a class="nav__link" href="#cuisine">Кухня</a>
+        <a class="nav__link" href="#wine">Вино</a>
+        <a class="nav__link" href="#chef">Шеф</a>
+        <a class="nav__link" href="#space">Пространство</a>
+        <a class="nav__link" href="#booking">Контакты</a>
+      </nav>
+      <a class="btn btn--outline header__cta magnetic" href="#booking">Забронировать</a>
+      <button class="burger" id="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="menu">
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ================= FULLSCREEN MENU ================= -->
+  <div class="menu" id="menu" aria-hidden="true">
+    <nav class="menu__nav" aria-label="Мобильная навигация">
+      <a class="menu__link" href="#cuisine"><span class="menu__num">01</span>Кухня</a>
+      <a class="menu__link" href="#wine"><span class="menu__num">02</span>Вино</a>
+      <a class="menu__link" href="#chef"><span class="menu__num">03</span>Шеф</a>
+      <a class="menu__link" href="#space"><span class="menu__num">04</span>Пространство</a>
+      <a class="menu__link" href="#booking"><span class="menu__num">05</span>Контакты</a>
+    </nav>
+    <div class="menu__footer">
+      <a class="btn btn--gold" href="#booking">Забронировать стол</a>
+      <p class="menu__meta">Москва, Большой Патриарший пер., 8<br>Вт–Вс · 19:00–00:00</p>
+    </div>
+  </div>
+
+  <main>
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="hero">
+      <video class="hero__video" id="heroVideo" autoplay muted loop playsinline preload="auto" poster="assets/img/hero-poster.jpg">
+        <source src="assets/video/hero.mp4" type="video/mp4">
+      </video>
+      <div class="hero__fallback" aria-hidden="true"></div>
+      <div class="hero__overlay" aria-hidden="true"></div>
+
+      <div class="hero__content" data-parallax="0.22">
+        <div class="container">
+          <p class="kicker reveal">Авторская кухня · Москва</p>
+          <h1 class="hero__title reveal" style="--d:.12s">Вкус, который<br>остаётся в <em>памяти</em></h1>
+          <p class="hero__sub reveal" style="--d:.24s">12 столов. Дегустационный сет из восьми подач. Винная карта на 240 позиций — гастрономия, сведённая к&nbsp;совершенству.</p>
+          <div class="hero__actions reveal" style="--d:.36s">
+            <a class="btn btn--gold magnetic" href="#booking">Забронировать стол</a>
+            <a class="btn btn--ghost magnetic" href="#tasting">Смотреть меню</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <div class="marquee__group">
+            <span>Michelin Guide 2025</span><i class="marquee__sep"></i>
+            <span>Топ-50 ресторанов Москвы</span><i class="marquee__sep"></i>
+            <span>Wine Spectator Award of Excellence</span><i class="marquee__sep"></i>
+            <span>Michelin Guide 2025</span><i class="marquee__sep"></i>
+            <span>Топ-50 ресторанов Москвы</span><i class="marquee__sep"></i>
+            <span>Wine Spectator Award of Excellence</span><i class="marquee__sep"></i>
+          </div>
+          <div class="marquee__group">
+            <span>Michelin Guide 2025</span><i class="marquee__sep"></i>
+            <span>Топ-50 ресторанов Москвы</span><i class="marquee__sep"></i>
+            <span>Wine Spectator Award of Excellence</span><i class="marquee__sep"></i>
+            <span>Michelin Guide 2025</span><i class="marquee__sep"></i>
+            <span>Топ-50 ресторанов Москвы</span><i class="marquee__sep"></i>
+            <span>Wine Spectator Award of Excellence</span><i class="marquee__sep"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT / ФИЛОСОФИЯ ================= -->
+    <section class="about section" id="about">
+      <div class="container">
+        <div class="about__grid">
+          <div class="about__text">
+            <p class="kicker reveal">Философия вкуса</p>
+            <h2 class="section__title reveal" style="--d:.1s">Ресторан про тишину<br>и <em>чистый вкус</em></h2>
+            <div class="about__paragraphs" data-stagger>
+              <p class="reveal">NOIR — это ресторан про тишину и вкус. Мы убрали лишнее: белый свет, громкую музыку, десятки блюд в меню. Осталось главное — продукт, огонь и двенадцать столов, за которыми время замедляется.</p>
+              <p class="reveal">Каждый вечер шеф-повар Артём Володин и его команда собирают дегустационный сет из восьми подач — от первого амюза до десерта с чёрным трюфелем. Сет меняется каждые шесть недель, следуя за сезоном и настроением.</p>
+              <p class="reveal">Мы не гонимся за эффектностью. Наша роскошь — в деталях: свеча на столе, бокал бордо из погреба 1998 года и блюдо, о котором вы будете думать завтра.</p>
+            </div>
+          </div>
+          <div class="about__media reveal reveal--right">
+            <div class="frame frame--gold">
+              <img class="parallax-img" src="assets/img/chef-team.jpg" alt="Команда шеф-поваров работает в тёмной кухне ресторана NOIR" loading="lazy" decoding="async" data-parallax="0.09" data-parallax-scale="1.14">
+            </div>
+            <p class="about__media-note">Кухня NOIR · 21:47, второй час сервиса</p>
+          </div>
+        </div>
+
+        <div class="counters" data-stagger>
+          <div class="counters__item reveal">
+            <span class="counters__value"><span class="counter__num" data-target="12">0</span></span>
+            <span class="counters__label">столов в зале</span>
+          </div>
+          <div class="counters__item reveal">
+            <span class="counters__value"><span class="counter__num" data-target="8">0</span></span>
+            <span class="counters__label">подач в сете</span>
+          </div>
+          <div class="counters__item reveal">
+            <span class="counters__value"><span class="counter__num" data-target="240">0</span></span>
+            <span class="counters__label">позиций вина</span>
+          </div>
+          <div class="counters__item reveal">
+            <span class="counters__value"><span class="counter__num" data-target="2">0</span></span>
+            <span class="counters__label">звезды гида</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TASTING SET ================= -->
+    <section class="tasting section" id="tasting">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="kicker">Дегустационный сет</p>
+          <h2 class="section__title">Восемь подач —<br><em>один вечер</em></h2>
+          <p class="section__lead">Сет обновляется каждые шесть недель. Ниже — текущая версия: она действует до конца зимнего сезона.</p>
+        </div>
+
+        <div class="tasting__grid">
+          <div class="acc" data-stagger>
+            <div class="acc__item reveal is-open">
+              <button class="acc__head" type="button" aria-expanded="true">
+                <span class="acc__num">01</span>
+                <span class="acc__name">Амуз: гребешок</span>
+                <span class="acc__icon" aria-hidden="true"></span>
+              </button>
+              <div class="acc__body">
+                <div class="acc__inner">
+                  <p>Сырой гребешок из бухты Петра Великого, сок юдзу, икра щуки и масло из обжаренных водорослей. Лёгкое, почти прозрачное начало вечера.</p>
+                  <p class="acc__pair">В сопровождении: Шабли Премье Крю, 2020</p>
+                </div>
+              </div>
+            </div>
+            <div class="acc__item reveal">
+              <button class="acc__head" type="button" aria-expanded="false">
+                <span class="acc__num">02</span>
+                <span class="acc__name">Тартар из тунца</span>
+                <span class="acc__icon" aria-hidden="true"></span>
+              </button>
+              <div class="acc__body">
+                <div class="acc__inner">
+                  <p>Рубленый синий тунец, крем из авокадо, кунжутное масло и чипс из чёрного риса. Подача с осетровой икрой и золотой стружкой.</p>
+                  <p class="acc__pair">В сопровождении: Совиньон Блан, Сансер, 2021</p>
+                </div>
+              </div>
+            </div>
+            <div class="acc__item reveal">
+              <button class="acc__head" type="button" aria-expanded="false">
+                <span class="acc__num">03</span>
+                <span class="acc__name">Устрица Fine de Claire</span>
+                <span class="acc__icon" aria-hidden="true"></span>
+              </button>
+              <div class="acc__body">
+                <div class="acc__inner">
+                  <p>Устрица особого откорма №2, гранита из зелёного яблока и шампанского, желе из устричного сока с «жемчужинами» таро.</p>
+                  <p class="acc__pair">В сопровождении: Шампань Брют Резерв, NV</p>
+                </div>
+              </div>
+            </div>
+            <div class="acc__item reveal">
+              <button class="acc__head" type="button" aria-expanded="false">
+                <span class="acc__num">04</span>
+                <span class="acc__name">Палтус с трюфелем</span>
+                <span class="acc__icon" aria-hidden="true"></span>
+              </button>
+              <div class="acc__body">
+                <div class="acc__inner">
+                  <p>Томлёный в масле палтус, крем из цветной капусты, молодой шпинат и перигорский трюфель. Контраст нежности и земли.</p>
+                  <p class="acc__pair">В сопровождении: Мерсо «Ле Клю», 2018</p>
+                </div>
+              </div>
+            </div>
+            <div class="acc__item reveal">
+              <button class="acc__head" type="button" aria-expanded="false">
+                <span class="acc__num">05</span>
+                <span class="acc__name">Фуа-гра</span>
+                <span class="acc__icon" aria-hidden="true"></span>
+              </button>
+              <div class="acc__body">
+                <div class="acc__inner">
+                  <p>Террин из фуа-гра с инжирным компотом, какао-бобами и бриошью, обжаренной до карамельной корочки.</p>
+                  <p class="acc__pair">В сопровождении: Сотерн, Шато Клименс, 2016</p>
+                </div>
+              </div>
+            </div>
+            <div class="acc__item reveal">
+              <button class="acc__head" type="button" aria-expanded="false">
+                <span class="acc__num">06</span>
+                <span class="acc__name">Сибас с фенхелем</span>
+                <span class="acc__icon" aria-hidden="true"></span>
+              </button>
+              <div class="acc__body">
+                <div class="acc__inner">
+                  <p>Филе сибаса с хрустящей кожей, баригуль из фенхеля, эмульсия из укропа и соус бёр-блан с лимонной вербеной.</p>
+                  <p class="acc__pair">В сопровождении: Пуйи-Фюиссе, 2019</p>
+                </div>
+              </div>
+            </div>
+            <div class="acc__item reveal">
+              <button class="acc__head" type="button" aria-expanded="false">
+                <span class="acc__num">07</span>
+                <span class="acc__name">Говядина Wagyu A5</span>
+                <span class="acc__icon" aria-hidden="true"></span>
+              </button>
+              <div class="acc__body">
+                <div class="acc__inner">
+                  <p>Мраморная говядина A5, глазированная в костном мозге, пюре из копчёного картофеля и демиглас на чёрном трюфеле.</p>
+                  <p class="acc__pair">В сопровождении: Бароло Дочьетти, 2016</p>
+                </div>
+              </div>
+            </div>
+            <div class="acc__item reveal">
+              <button class="acc__head" type="button" aria-expanded="false">
+                <span class="acc__num">08</span>
+                <span class="acc__name">Десерт «Чёрный трюфель»</span>
+                <span class="acc__icon" aria-hidden="true"></span>
+              </button>
+              <div class="acc__body">
+                <div class="acc__inner">
+                  <p>Шоколадный крем 72%, ганаш с чёрным трюфелем, сорбет из вишни и декор из золотой пыли. Финальный аккорд сета.</p>
+                  <p class="acc__pair">В сопровождении: Педро-Хименес, 30 лет</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <aside class="price-card reveal reveal--right">
+            <p class="price-card__kicker">Стоимость</p>
+            <div class="price-card__row">
+              <span class="price-card__label">Дегустационный сет · 8 подач</span>
+              <span class="price-card__value">12 500 ₽</span>
+            </div>
+            <div class="price-card__divider" aria-hidden="true"></div>
+            <div class="price-card__row">
+              <span class="price-card__label">С винным сопровождением</span>
+              <span class="price-card__value">18 500 ₽</span>
+            </div>
+            <p class="price-card__note">Сопровождение подобрано сомелье ресторана: шесть бокалов и один крепкий аккорд. Полный сет — около трёх часов.</p>
+            <a class="btn btn--gold price-card__btn" href="#booking">Забронировать сет</a>
+            <p class="price-card__bonus">Комплимент от шефа при бронировании онлайн</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= MENU HIGHLIGHTS ================= -->
+    <section class="highlights section" id="cuisine">
+      <div class="container">
+        <div class="section__head section__head--center reveal">
+          <p class="kicker">Визитные карточки кухни</p>
+          <h2 class="section__title">Три блюда, ради которых<br><em>возвращаются</em></h2>
+        </div>
+
+        <div class="dishes" data-stagger>
+          <article class="dish-card reveal" data-tilt>
+            <div class="dish-card__media">
+              <img src="assets/img/dish-fish.jpg" alt="Палтус с трюфелем на чёрной тарелке — фирменная подача ресторана NOIR" loading="lazy" decoding="async">
+            </div>
+            <div class="dish-card__body">
+              <h3 class="dish-card__name">Палтус с трюфелем</h3>
+              <p class="dish-card__desc">Томлёный в масле палтус, крем из цветной капусты, перигорский трюфель.</p>
+              <span class="dish-card__price">2 400 ₽</span>
+            </div>
+            <span class="dish-card__glare" aria-hidden="true"></span>
+          </article>
+
+          <article class="dish-card reveal" data-tilt>
+            <div class="dish-card__media">
+              <img src="assets/img/dish-beef.jpg" alt="Говядина Wagyu A5 в премиальной подаче на тёмном фоне" loading="lazy" decoding="async">
+            </div>
+            <div class="dish-card__body">
+              <h3 class="dish-card__name">Wagyu A5</h3>
+              <p class="dish-card__desc">Говядина двойной мраморности, демиглас на чёрном трюфеле, копчёный картофель.</p>
+              <span class="dish-card__price">6 800 ₽</span>
+            </div>
+            <span class="dish-card__glare" aria-hidden="true"></span>
+          </article>
+
+          <article class="dish-card reveal" data-tilt>
+            <div class="dish-card__media">
+              <img src="assets/img/dish-salmon.jpg" alt="Сибас с фенхелем на чёрном фоне — блюдо авторской кухни" loading="lazy" decoding="async">
+            </div>
+            <div class="dish-card__body">
+              <h3 class="dish-card__name">Сибас с фенхелем</h3>
+              <p class="dish-card__desc">Хрустящая кожа, баригуль из фенхеля, соус бёр-блан с лимонной вербеной.</p>
+              <span class="dish-card__price">2 100 ₽</span>
+            </div>
+            <span class="dish-card__glare" aria-hidden="true"></span>
+          </article>
+        </div>
+
+        <div class="highlights__action reveal">
+          <a class="btn btn--ghost" href="#tasting">Полное меню</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= WINE ================= -->
+    <section class="wine section" id="wine">
+      <div class="container">
+        <div class="wine__grid">
+          <div class="wine__media reveal reveal--left">
+            <div class="frame frame--gold">
+              <img class="parallax-img" src="assets/img/wine-pour.jpg" alt="Вино наливают в бокал при свечах — погреб ресторана NOIR" loading="lazy" decoding="async" data-parallax="0.09" data-parallax-scale="1.14">
+            </div>
+            <div class="wine__badge">
+              <span class="wine__badge-num"><span class="counter__num" data-target="240">0</span></span>
+              <span class="wine__badge-label">позиций<br>в погребе</span>
+            </div>
+          </div>
+
+          <div class="wine__content">
+            <p class="kicker reveal">Винная карта</p>
+            <h2 class="section__title reveal" style="--d:.1s"><em>240 историй</em><br>в бокале</h2>
+            <p class="section__lead reveal" style="--d:.2s">Погреб NOIR хранит более 240 позиций — от деревенских бургундских виноделов до вертикалей Сассикайи. Сомелье подберёт сопровождение под каждую подачу сета.</p>
+
+            <div class="wine__rows" data-stagger>
+              <div class="wine-row reveal">
+                <button class="wine-row__head" type="button" aria-expanded="false">
+                  <span class="wine-row__num">01</span>
+                  <span class="wine-row__name">Бургундия</span>
+                  <span class="wine-row__meta">64 позиции · 2014–2022</span>
+                  <span class="wine-row__arrow" aria-hidden="true"></span>
+                </button>
+                <div class="wine-row__body">
+                  <div class="wine-row__inner">
+                    <p>От Жевре-Шамбертена до Монраши: большие имена и малые виноделы, которые делают вино тишиной и терруаром.</p>
+                    <span class="wine-row__price">Бокал от 1 400 ₽</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="wine-row reveal">
+                <button class="wine-row__head" type="button" aria-expanded="false">
+                  <span class="wine-row__num">02</span>
+                  <span class="wine-row__name">Бордо</span>
+                  <span class="wine-row__meta">58 позиций · 1998–2021</span>
+                  <span class="wine-row__arrow" aria-hidden="true"></span>
+                </button>
+                <div class="wine-row__body">
+                  <div class="wine-row__inner">
+                    <p>Левый берег и Сент-Эмильон. Классика в идеальных миллезимах — включая бордо 1998 года из нашего погреба.</p>
+                    <span class="wine-row__price">Бокал от 1 100 ₽</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="wine-row reveal">
+                <button class="wine-row__head" type="button" aria-expanded="false">
+                  <span class="wine-row__num">03</span>
+                  <span class="wine-row__name">Пьемонт</span>
+                  <span class="wine-row__meta">37 позиций · 2013–2020</span>
+                  <span class="wine-row__arrow" aria-hidden="true"></span>
+                </button>
+                <div class="wine-row__body">
+                  <div class="wine-row__inner">
+                    <p>Бароло и Барбареско — туманные холмы Ланге в бокале. Неббиоло для тех, кто никуда не спешит.</p>
+                    <span class="wine-row__price">Бокал от 1 300 ₽</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="wine-row reveal">
+                <button class="wine-row__head" type="button" aria-expanded="false">
+                  <span class="wine-row__num">04</span>
+                  <span class="wine-row__name">Риоха</span>
+                  <span class="wine-row__meta">29 позиций · 2005–2019</span>
+                  <span class="wine-row__arrow" aria-hidden="true"></span>
+                </button>
+                <div class="wine-row__body">
+                  <div class="wine-row__inner">
+                    <p>Темпранильо долгой выдержки из старых бочек американского дуба. Испания с характером и памятью.</p>
+                    <span class="wine-row__price">Бокал от 900 ₽</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="wine-row reveal">
+                <button class="wine-row__head" type="button" aria-expanded="false">
+                  <span class="wine-row__num">05</span>
+                  <span class="wine-row__name">Тоскана</span>
+                  <span class="wine-row__meta">52 позиции · 2010–2021</span>
+                  <span class="wine-row__arrow" aria-hidden="true"></span>
+                </button>
+                <div class="wine-row__body">
+                  <div class="wine-row__inner">
+                    <p>Сассикайя, Орнеллайя и Брунелло ди Монтальчино. Супертосканцы, спорящие с классикой — и выигрывающие.</p>
+                    <span class="wine-row__price">Бокал от 1 200 ₽</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="wine__accent reveal">
+              <img src="assets/img/wine-table.jpg" alt="Тёмный стол с бокалами вина при свечах" loading="lazy" decoding="async">
+              <p class="wine__accent-note">Каждый четверг — вечер погреба: вертикаль из шести виноделов за одним столом</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CHEF ================= -->
+    <section class="chef section" id="chef">
+      <div class="container">
+        <div class="chef__grid">
+          <div class="chef__media reveal reveal--left">
+            <div class="frame frame--offset">
+              <img class="parallax-img" src="assets/img/chef-bw.jpg" alt="Чёрно-белый портрет шеф-повара Артёма Володина" loading="lazy" decoding="async" data-parallax="0.07" data-parallax-scale="1.12">
+            </div>
+          </div>
+          <div class="chef__content">
+            <p class="kicker reveal">Шеф-повар</p>
+            <blockquote class="chef__quote reveal" style="--d:.12s">
+              <p>«Чёрный — это не отсутствие цвета. Это <em>концентрация вкуса</em>.»</p>
+            </blockquote>
+            <p class="chef__author reveal" style="--d:.2s">Артём Володин <span>· шеф-повар NOIR</span></p>
+            <div class="chef__bio" data-stagger>
+              <p class="reveal">Артём Володин — пятнадцать лет у плиты и три года в бригадах ресторанов Копенгагена и Сан-Себастьяна, отмеченных гидом Michelin. В NOIR он отвечает за всё: от выбора поставщика до свечи на вашем столе.</p>
+              <p class="reveal">Его кухня — это точность грамма и уважение к продукту: ничего лишнего между вами и вкусом.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SPACE / GALLERY ================= -->
+    <section class="space section" id="space">
+      <div class="container">
+        <div class="section__head section__head--center reveal">
+          <p class="kicker">Пространство</p>
+          <h2 class="section__title">Свет приглушён.<br><em>Начинаем.</em></h2>
+        </div>
+
+        <div class="gallery" data-stagger>
+          <button class="gallery__item gallery__item--a reveal" type="button" data-src="assets/img/interior-main.jpg" data-caption="Основной зал — свечи и тёмный камень">
+            <img src="assets/img/interior-main.jpg" alt="Тёмный зал ресторана NOIR при свечах" loading="lazy" decoding="async">
+            <span class="gallery__caption">Основной зал</span>
+            <span class="gallery__hint">Смотреть</span>
+          </button>
+          <button class="gallery__item gallery__item--b reveal" type="button" data-src="assets/img/bar-amber.jpg" data-caption="Амбер-бар — подсветка из-за бархата">
+            <img src="assets/img/bar-amber.jpg" alt="Амбер-бар с тёплой подсветкой бутылок" loading="lazy" decoding="async">
+            <span class="gallery__caption">Амбер-бар</span>
+            <span class="gallery__hint">Смотреть</span>
+          </button>
+          <button class="gallery__item gallery__item--c reveal" type="button" data-src="assets/img/dish-veg.jpg" data-caption="Гастрономическая тарелка — сезонные овощи">
+            <img src="assets/img/dish-veg.jpg" alt="Гастрономическая тарелка с сезонными овощами" loading="lazy" decoding="async">
+            <span class="gallery__caption">Гастро-тарелка</span>
+            <span class="gallery__hint">Смотреть</span>
+          </button>
+          <button class="gallery__item gallery__item--d reveal" type="button" data-src="assets/img/wine-table.jpg" data-caption="Стол сомелье — подбор вин к сету">
+            <img src="assets/img/wine-table.jpg" alt="Тёмный стол с бокалами вина при свечах" loading="lazy" decoding="async">
+            <span class="gallery__caption">Стол сомелье</span>
+            <span class="gallery__hint">Смотреть</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= REVIEWS ================= -->
+    <section class="reviews section" id="reviews">
+      <div class="container container--narrow">
+        <div class="section__head section__head--center reveal">
+          <p class="kicker">Отзывы</p>
+          <h2 class="section__title">Говорят <em>гости</em></h2>
+        </div>
+
+        <div class="slider reveal" id="reviewsSlider">
+          <div class="slider__viewport">
+            <ul class="slider__track">
+              <li class="review is-active">
+                <div class="review__stars" aria-label="Оценка 5 из 5">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+                </div>
+                <p class="review__text">Это не ужин — это спектакль из восьми действий. Палтус с трюфелем я до сих пор вспоминаю в тишине, что для меня редкость. Сервис — на уровне лучших ресторанов Европы.</p>
+                <p class="review__author">Елена М.</p>
+                <p class="review__context">День рождения мужа · март</p>
+              </li>
+              <li class="review">
+                <div class="review__stars" aria-label="Оценка 5 из 5">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+                </div>
+                <p class="review__text">Брал сет с винным сопровождением. Каждая подача — с историей от сомелье, каждый бокал — в тему. Wagyu A5 того стоит. Вернусь на новую версию сета в следующем сезоне.</p>
+                <p class="review__author">Дмитрий К.</p>
+                <p class="review__context">Корпоративный ужин · февраль</p>
+              </li>
+              <li class="review">
+                <div class="review__stars" aria-label="Оценка 5 из 5">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+                </div>
+                <p class="review__text">Тихая музыка, свечи, чёрный камень и золото — интерьер настраивает с первой минуты. Отдельное спасибо за десерт «Чёрный трюфель» — финал, ради которого досиживаешь до полуночи.</p>
+                <p class="review__author">Александра П.</p>
+                <p class="review__context">Свидание · январь</p>
+              </li>
+            </ul>
+          </div>
+          <div class="slider__nav">
+            <button class="slider__arrow" type="button" data-dir="-1" aria-label="Предыдущий отзыв">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+            </button>
+            <div class="slider__dots" role="tablist" aria-label="Навигация по отзывам"></div>
+            <button class="slider__arrow" type="button" data-dir="1" aria-label="Следующий отзыв">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= BOOKING ================= -->
+    <section class="booking section" id="booking">
+      <div class="container">
+        <div class="booking__grid">
+          <div class="booking__info">
+            <p class="kicker reveal">Бронирование</p>
+            <h2 class="section__title reveal" style="--d:.1s">Займите свой<br><em>стол</em></h2>
+            <p class="section__lead reveal" style="--d:.2s">Мы подтверждаем бронь по телефону в течение часа. Для компаний от 7 гостей — отдельный зал и персональный сет от шефа.</p>
+
+            <dl class="booking__details" data-stagger>
+              <div class="booking__row reveal">
+                <dt>Часы работы</dt>
+                <dd>Вт–Вс · 19:00–00:00</dd>
+              </div>
+              <div class="booking__row reveal">
+                <dt>Адрес</dt>
+                <dd>Москва, Большой Патриарший пер., 8</dd>
+              </div>
+              <div class="booking__row reveal">
+                <dt>Телефон</dt>
+                <dd><a href="tel:+74951204567">+7 (495) 120-45-67</a></dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="booking__form-wrap reveal reveal--right">
+            <form class="form" id="bookingForm" novalidate>
+              <div class="form__row">
+                <div class="field">
+                  <label class="field__label" for="bkName">Имя</label>
+                  <input class="field__input" type="text" id="bkName" name="name" placeholder="Как к вам обращаться" autocomplete="name">
+                  <span class="field__error" aria-live="polite"></span>
+                </div>
+                <div class="field">
+                  <label class="field__label" for="bkPhone">Телефон</label>
+                  <input class="field__input" type="tel" id="bkPhone" name="phone" placeholder="+7 (___) ___-__-__" autocomplete="tel" inputmode="tel">
+                  <span class="field__error" aria-live="polite"></span>
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="field">
+                  <label class="field__label" for="bkDate">Дата</label>
+                  <input class="field__input" type="date" id="bkDate" name="date">
+                  <span class="field__error" aria-live="polite"></span>
+                </div>
+                <div class="field">
+                  <label class="field__label" for="bkGuests">Гостей</label>
+                  <select class="field__input field__input--select" id="bkGuests" name="guests">
+                    <option value="1">1 гость</option>
+                    <option value="2" selected>2 гостя</option>
+                    <option value="3">3 гостя</option>
+                    <option value="4">4 гостя</option>
+                    <option value="5">5 гостей</option>
+                    <option value="6">6 гостей</option>
+                    <option value="7">7 гостей</option>
+                    <option value="8">8 гостей</option>
+                  </select>
+                  <span class="field__error" aria-live="polite"></span>
+                </div>
+              </div>
+              <button class="btn btn--gold form__submit" type="submit">
+                <span class="btn__text">Забронировать</span>
+                <span class="btn__loader" aria-hidden="true"><i></i><i></i><i></i></span>
+              </button>
+              <p class="form__note">Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных.</p>
+            </form>
+
+            <div class="form-success" id="formSuccess" hidden>
+              <span class="form-success__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+              </span>
+              <h3 class="form-success__title">Стол забронирован</h3>
+              <p class="form-success__text">Мы позвоним для подтверждения. До встречи в NOIR.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <p class="footer__logo">NOIR<span class="logo__dot">.</span></p>
+          <p class="footer__tagline">Авторская кухня высокой моды<br>Москва, Большой Патриарший пер., 8</p>
+          <div class="footer__socials">
+            <a class="footer__social" href="#hero" aria-label="Telegram" title="Telegram">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 3L2.6 10.5c-.8.3-.8 1.4 0 1.7l4.9 1.6 1.9 5.6c.2.7 1.1.9 1.6.3l2.7-3 4.9 3.6c.6.4 1.5.1 1.6-.7L23 4.2c.1-.9-.6-1.5-1-1.2z" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+            </a>
+            <a class="footer__social" href="#hero" aria-label="Instagram" title="Instagram*">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.3"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.3"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg>
+            </a>
+            <a class="footer__social" href="#hero" aria-label="VK" title="VK">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7.5l4.2 9L12 11l3.8 5.5 4.2-9" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 11l4.4-4.6M12 11L7.6 6.4" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+            </a>
+          </div>
+          <p class="footer__legal">*Instagram принадлежит Meta Platforms Inc., деятельность которой запрещена на территории РФ.</p>
+        </div>
+        <nav class="footer__nav" aria-label="Навигация в подвале">
+          <p class="footer__heading">Навигация</p>
+          <a href="#cuisine">Кухня</a>
+          <a href="#wine">Вино</a>
+          <a href="#chef">Шеф</a>
+          <a href="#space">Пространство</a>
+          <a href="#booking">Контакты</a>
+        </nav>
+        <div class="footer__contacts">
+          <p class="footer__heading">Контакты</p>
+          <a href="tel:+74951204567">+7 (495) 120-45-67</a>
+          <p>Вт–Вс · 19:00–00:00</p>
+          <p>Москва, Большой Патриарший пер., 8</p>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 Ресторан NOIR</p>
+        <p>Разработка: Kwork Premium</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= BACK TO TOP ================= -->
+  <button class="to-top" id="toTop" type="button" aria-label="Наверх">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+
+  <!-- ================= LIGHTBOX ================= -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Просмотр фотографии" aria-hidden="true">
+    <button class="lightbox__close" type="button" aria-label="Закрыть">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    </button>
+    <span class="lightbox__count">1 / 4</span>
+    <button class="lightbox__nav lightbox__nav--prev" type="button" aria-label="Предыдущее фото">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+    </button>
+    <figure class="lightbox__stage">
+      <img class="lightbox__img" src="" alt="">
+      <figcaption class="lightbox__caption"></figcaption>
+    </figure>
+    <button class="lightbox__nav lightbox__nav--next" type="button" aria-label="Следующее фото">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+    </button>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
